@@ -1,0 +1,25 @@
+﻿@model mvcP.Models.Birim
+
+@{
+    ViewData["Title"] = "DepartmanGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h2>Birimler Güncelleme</h2>
+@using (Html.BeginForm("Guncelle","Birimler",FormMethod.Post))
+{
+    <b>Departman ID</b>
+    @Html.TextBoxFor(x=>x.BirimID, new {@class="form-control"})
+    <b>Departman Adı</b>
+    @Html.TextBoxFor(x=>x.BirimAd, new {@class="form-control"})
+
+
+
+
+    <button class="btn btn-default" style="background-color:#ebdede; color:black">Güncelle</button>
+
+
+}
+
+
+

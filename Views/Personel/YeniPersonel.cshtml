@@ -1,0 +1,29 @@
+﻿@model mvcP.Models.personel
+@{
+    ViewData["Title"] = "YeniPersonel";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>YeniPersonel</h1>
+
+<form class="form-group" method="post">
+    <br>
+    <b>Ad</b>
+    @Html.TextBoxFor(x=>x.ad, new {@class="form-control"})
+    <br />
+    <b>Soyad</b>
+    @Html.TextBoxFor(x=>x.soyad, new {@class="form-control"})
+    <br />
+    <b>Şehir</b>
+    @Html.TextBoxFor(x=>x.sehir, new {@class="form-control"})
+    <br />
+    <b>Birim</b>
+    @Html.DropDownListFor(x=>x.Birim.BirimID,(List<SelectListItem>)ViewBag.Deger, new { @class="form-control"})
+
+    <br/>
+
+
+
+    <button class="btn btn-info">Personel Ekle </button>
+
+</form>

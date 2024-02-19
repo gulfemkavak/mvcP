@@ -1,0 +1,18 @@
+﻿@model mvcP.Models.Birim
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    Departman Adı
+    @Html.TextBoxFor(x=>x.BirimAd, new {@class="form-control"})
+
+
+
+  
+
+    <button class="btn btn-info">Birim Ekle </button>
+
+</form>

@@ -1,0 +1,30 @@
+﻿@using mvcP.Models
+@model List<Birim>  
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    
+    <tr>
+        <th>ID</th>
+        <th>Birim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    
+        @foreach(var x in Model)
+        {
+     <tr>       
+        
+        <th>@x.BirimID</th>
+        <th>@x.BirimAd</th>
+        <th><a href="/Birimler/DepartmanSil/@x.BirimID" class="btn btn-danger">Sil</a></th>
+        <th><a href="/Birimler/DepartmanGetir/@x.BirimID" class="btn btn-success">Güncelle</a></th>
+        <th><a href="#" class="btn btn-default" style="background-color:bisque">Detaylar</a></th>
+    </tr>
+        }
+</table>
+        <a href="/Birimler/YeniDepartman/" class="btn btn-primary">Yeni Departman</a>
